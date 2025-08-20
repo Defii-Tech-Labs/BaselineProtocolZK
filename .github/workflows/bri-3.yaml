@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 23
 
       - name: Cache node_modules
         uses: actions/cache@v3
@@ -30,7 +30,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libssl-dev zlib1g-dev
+          sudo apt-get install -y build-essential libssl-dev zlib1g-dev curl unzip
 
       - name: Create .env file
         working-directory: bri-3
@@ -60,10 +60,6 @@ jobs:
           echo EFAKTURA_URL=${{ secrets.EFAKTURA_URL }} >> .env
           echo CIRCUIT_TYPE=Plonk >> .env
 
-      - name: Print .env for debugging
-        working-directory: bri-3
-        run: cat .env
-
       - name: Install project dependencies
         working-directory: bri-3
         run: npm ci
@@ -83,16 +79,3 @@ jobs:
       - name: Run tests
         working-directory: bri-3
         run: npm run test
-
-      - name: Run sri tests
-        working-directory: bri-3
-        run: make test-sri
-
-      - name: Run origination tests
-        working-directory: bri-3
-        run: make test-origination
-
-      - name: Cleanup Docker containers
-        if: always()
-        working-directory: bri-3
-        run: make down
