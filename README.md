@@ -114,6 +114,8 @@ $ PROTOCOL=plonk npm run snarkjs:circuit originationWorkgroup/serbia_workstep4
 $ PROTOCOL=plonk npm run snarkjs:circuit originationWorkgroup/romania_workstep1 
 ```
 
+NOTE: for above to work, make sure circom v2.1.9 is installed. If this [guide](https://docs.circom.io/getting-started/installation/#installing-dependencies) is followed for installation, after `git clone https://github.com/iden3/circom.git` execute `cd circom and git checkout v2.1.9`. 
+
 ```bash
 # e2e testing - .e2e.spec files and the bash script used for running located in ./test folder
 # before running the tests, make sure that postgres and nats are running
@@ -122,6 +124,16 @@ $ PROTOCOL=plonk npm run snarkjs:circuit originationWorkgroup/romania_workstep1
 $ cd test
 $ sh ./e2e-test-sri.sh
 $ sh ./e2e-test-origination.sh
+```
+
+For testing origination workflow, folder `zeroKnowledgeArtifacts` has to be present in `bri-3` as it is mounted as volume of docker containers.
+This can be built manually with `plonk` as described above, but for convenience zip file is available and can be downloaded like this:
+
+```
+cd bri-3
+rm -rf zeroKnowledgeArtifacts
+curl -L https://zkartifacts.sfo3.digitaloceanspaces.com/zeroKnowledgeArtifacts.zip -o zeroKnowledgeArtifacts.zip
+unzip -q zeroKnowledgeArtifacts.zip -d .
 ```
 
 To run e2e tests with docker:
