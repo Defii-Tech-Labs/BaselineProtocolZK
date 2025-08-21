@@ -187,6 +187,22 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## CI
+
+There are 3 workflows:
+
+- `bri-3.yaml`
+
+This workflow is checking if build, formatter, linter and unit tests are working. It is running on every commit on PR and push to main.
+
+- `origination-tests.yaml`
+
+This workflow is running origination e2e tests on self hosted github runner. It is running on every push to main.
+
+- `deploy-staging.yaml`
+
+This workflow is manually triggered. It will pull latest main branch on staging environment, clean up and redeploy all docker containers needed to run origination flow.
+
 
 ## 📋 Core Features
 
