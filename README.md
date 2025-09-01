@@ -86,7 +86,7 @@ The technical process for the Baseline Protocol implementation involves the foll
 
 **Step 2: Create BPI Subject (Supplier & Buyer)**
 
-- The user creates a BPI (Business Process Interface) subject for both the supplier and buyer.
+- The user creates a BPISubject (user identity on BPI) for both the supplier and buyer.
 - The BPI subject is created using the `createExternalBpiSubject` function, which takes in the subject's name and public key as input.
 - The public key is used to authenticate the subject and ensure that only authorized parties can access the data.
 
@@ -94,23 +94,23 @@ The technical process for the Baseline Protocol implementation involves the foll
 
 - Once the BPI subject is created, a BPI subject account is created for both the supplier and buyer.
 - The BPI subject account is created using the `createBpiSubjectAccount` function, which takes in the subject's ID and public key as input.
-- The BPI subject account is used to manage the subject's data and ensure that only authorized parties can access it.
+- The BPI subject account is used to manage the subject's data and ensure that only authorized parties can access it. `BPISubjectAccount` participates in a workgroup, creates workflows and worksteps based on business logic, and authorises transactions by signing them with its private key.
 
 **Step 4: Create "Origination" Workgroup**
 
 - A workgroup is created for the origination process, which is used to manage the workflow and transactions.
 - The workgroup is created using the `createWorkgroup` function, which takes in the workgroup's name and description as input.
+- Relevant BPI subjects (supplier and buyer) are added as participants in the workgroup.
 
 **Step 5: Create Worksteps**
 
-- Worksteps are created for each step in the origination process, such as creating a transaction and verifying the transaction result.
+- Worksteps are created for each step in the origination process, such as checking the invoice amounts, validating the national certificate of supplier, and verifying the supplier company details.
 - The worksteps are created using the `createWorkstep` function, which takes in the workstep's name and description as input.
 
 **Step 6: Create Workflow & Add Worksteps**
 
 - A workflow is created to manage the origination process, which includes the worksteps created in the previous step.
-- The workflow is created using the `createWorkflow` function, which takes in the workflow's name and description as input.
-- The worksteps are added to the workflow using the `addWorkstepToWorkflow` function.
+- This workflow will be added to the workgroup created in Step 4.
 
 **Step 7: Add Transaction Schemas to Worksteps**
 
@@ -119,19 +119,22 @@ The technical process for the Baseline Protocol implementation involves the foll
 
 **Step 8: Create Transactions**
 
-- Transactions are created for each workstep, which includes the transaction data and schema.
+- Transactions are created for each workstep, which includes the transaction data as per the above schema.
 - The transactions are created using the `createTransaction` function, which takes in the workstep's ID, transaction data, and schema as input.
 
 **Step 9: Check Transaction Execution**
 
-- The transaction execution is checked to ensure that it was successful.
-- The transaction execution is checked using the `checkTransactionExecution` function, which takes in the transaction's ID as input.
+- The VSM (Virtual State Machine) processes the transactions in the order they were created.
+- The state and history trees are updated as each transaction is executed.
+- State and history trees are Merkle trees that store the current state of the workgroup and the history of all transactions, respectively.
+- The VSM ensures that the transactions are executed in the correct order and that the state and history trees are updated accordingly.
 
 **Step 10: Verify Transaction Result on-chain (ZK Proof)**
 
 - The transaction result is verified on-chain using a zero-knowledge proof (ZK proof).
+- This verification can be done by any third-party auditor on any EVM-compatible blockchain, such as Polygon or Avalanche, without needing access to the BPI system or any sensitive data.
 - The ZK proof is used to ensure that the transaction result is correct and that the data has not been tampered with.
-- The ZK proof is verified using the `verifyTransactionResultOnChain` function, which takes in the transaction's ID and ZK proof as input.
+- The ZK proof is verified using the `verifyTransactionResultOnChain` function, which takes in the transaction's ID and ZK proof as input
 
 ---
 
