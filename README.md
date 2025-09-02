@@ -62,7 +62,7 @@ The project is structured into multiple directories, each serving a specific pur
   4. `communication`: Messaging and event handling using NATS
   5. `identity`: User management and DID authentication
   6. `state`: State management of BPISubjectAccounts as per workflow progress
-  7. `transactions`: Transaction processing, including creation, execution, and verification of worksteps
+  7. `transactions`: Transaction processing, including execution, and verification of worksteps
   8. `vsm`: Virtual State Machine for queuing and processing transactions
   9. `workgroups`: Workgroup and workflow management, including workstep definitions (business logic) and transaction schemas
   10. `zeroKnowledgeProof`: Zero-knowledge proof generation and verification of business logic as defined in worksteps
