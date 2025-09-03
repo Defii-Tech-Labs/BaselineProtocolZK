@@ -77,7 +77,7 @@ The project is structured into multiple directories, each serving a specific pur
 
 **Technical Process**
 
-The technical process for the Baseline Protocol implementation involves the following steps:
+You can use [Postman commands + scripts](https://github.com/NGI-TRUSTCHAIN/Baseline/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) to run the entire technical process for "Origination E2E use case". The technical process for the Baseline Protocol implementation involves the following steps:
 
 **Step 1: Generate Nonce + Login**
 
@@ -259,6 +259,9 @@ This single command:
 - Mock external APIs (business registries, e-invoicing platforms)
 - Blockchain interaction layers
 - Both BPI instances with full workflow support
+
+### Postman commands to test APIs (using Origination E2E usecase)
+You can use [Postman commands + scripts](https://github.com/NGI-TRUSTCHAIN/Baseline/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) to run the entire technical process for "Origination E2E use case". 
 
 ---
 
