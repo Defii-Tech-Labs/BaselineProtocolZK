@@ -1,6 +1,4 @@
-# Baseline Protocol for Cross-Jurisdictional Invoice Financing
-
-## NGI TRUSTCHAIN Open Call 4 Project
+## Baseline Protocol for Cross-Jurisdictional Invoice Financing
 
 A production-ready implementation of the Baseline Protocol enabling standardized, verifiable cross-border SME invoice financing between Serbian and Romanian markets through privacy-preserving zero-knowledge proofs and blockchain verification.
 
