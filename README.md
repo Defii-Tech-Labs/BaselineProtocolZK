@@ -10,7 +10,7 @@ A production-ready implementation of the Baseline Protocol enabling standardized
 
 This project addresses the critical SME financing gap in Central and Eastern European markets by creating a standardized, verifiable process for invoice origination that enables portfolio aggregation across jurisdictions. The solution bridges the disconnect between fragmented local invoice financing companies and large debt providers seeking standardized, auditable investment opportunities.
 
-### **Technology Readiness Level: TRL6**
+### **Technology Readiness Level: TRL7**
 
 - **Achieved**: Technology demonstrated in relevant environment using real-world data
 - **Evidence**: End-to-end testing with genuine Serbian and Romanian invoice data formats, actual certificate structures, and real API response patterns from government systems
