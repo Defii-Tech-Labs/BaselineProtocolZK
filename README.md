@@ -75,7 +75,7 @@ The project is structured into multiple directories, each serving a specific pur
 
 **Technical Process**
 
-You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203140/Trustchain.OC4.postman_collection.json) to run the entire technical process for "Origination E2E use case". The technical process for the Baseline Protocol implementation involves the following steps:
+You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Postman_collection.json](https://github.com/user-attachments/files/22203140/Trustchain.OC4.postman_collection.json) to run the entire technical process for "Origination E2E use case". The technical process for the Baseline Protocol implementation involves the following steps:
 
 **Step 1: Generate Nonce + Login**
 
@@ -149,7 +149,7 @@ You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineP
 ```bash
 
 # Clone the repository
-git clone https://github.com/NGI-TRUSTCHAIN/Baseline.git
+gh repo clone biscuitdey/BaselineProtocolZK
 cd Baseline
 cd bri-3
 
@@ -259,7 +259,7 @@ This single command:
 - Both BPI instances with full workflow support
 
 ### Postman commands to test APIs (using Origination E2E usecase)
-You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203178/Trustchain.OC4.postman_collection.json)
+You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Postman_collection.json](https://github.com/user-attachments/files/22203178/Trustchain.OC4.postman_collection.json)
 to run the entire technical process for "Origination E2E use case".
 
 
