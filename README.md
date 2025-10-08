@@ -75,7 +75,7 @@ The project is structured into multiple directories, each serving a specific pur
 
 **Technical Process**
 
-You can use [Postman commands + scripts](https://github.com/NGI-TRUSTCHAIN/Baseline/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203140/Trustchain.OC4.postman_collection.json) to run the entire technical process for "Origination E2E use case". The technical process for the Baseline Protocol implementation involves the following steps:
+You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203140/Trustchain.OC4.postman_collection.json) to run the entire technical process for "Origination E2E use case". The technical process for the Baseline Protocol implementation involves the following steps:
 
 **Step 1: Generate Nonce + Login**
 
@@ -259,7 +259,7 @@ This single command:
 - Both BPI instances with full workflow support
 
 ### Postman commands to test APIs (using Origination E2E usecase)
-You can use [Postman commands + scripts](https://github.com/NGI-TRUSTCHAIN/Baseline/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203178/Trustchain.OC4.postman_collection.json)
+You can use [Postman commands + scripts](https://github.com/biscuitdey/BaselineProtocolZK/blob/main/bri-3/test/Origination%20E2E%20Test-3.md) and [Trustchain OC4.postman_collection.json](https://github.com/user-attachments/files/22203178/Trustchain.OC4.postman_collection.json)
 to run the entire technical process for "Origination E2E use case".
 
 
@@ -492,7 +492,7 @@ make test-unit         # Run unit test suite
 
 ### **Open Source License**
 
-This project is released under Apache License as part of the NGI TRUSTCHAIN initiative.
+This project is released under Apache License as part of the Ethereum Oasis Open Project initiative.
 
 ### **Contributing**
 
@@ -500,18 +500,6 @@ We welcome contributions from the community. Please see our contributing guideli
 
 ### **Citation**
 
-If you use this work in academic research, please cite our TRUSTCHAIN deliverables and publications.
+If you use this work in academic research, please cite our Baseline Protocol deliverables and publications.
 
 ---
-
-## 🔗 Links & Resources
-
-- **Project Repository**: https://github.com/NGI-TRUSTCHAIN/Baseline
-- **TRUSTCHAIN Program**: [NGI TRUSTCHAIN Website]
-- **Technical Documentation**: [Link to comprehensive docs]
-- **API Documentation**: [Swagger/OpenAPI endpoint]
-- **Community Forum**: [Discord/Telegram link]
-
----
-
-_This project is funded by the European Union's Next Generation Internet (NGI) TRUSTCHAIN program under Grant Agreement No. [Agreement Number]. The content reflects only the authors' views and the European Commission is not responsible for any use that may be made of the information it contains._
